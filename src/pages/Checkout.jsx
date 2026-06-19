@@ -11,7 +11,11 @@ import {
   getMinDeliveryDate,
   validateCheckoutForm,
 } from '../utils/validation'
-import { isEmailConfigured, sendOrderConfirmation } from '../utils/email'
+import {
+  isEmailConfigured,
+  sendAdminNotification,
+  sendOrderConfirmation,
+} from '../utils/email'
 import {
   CalendarIcon,
   ClockIcon,
@@ -183,6 +187,7 @@ function CheckoutContent() {
       sendOrderConfirmation(result.order, user).then((res) => {
         setEmailStatus(res.sent ? 'sent' : 'failed')
       })
+      sendAdminNotification(result.order, user)
     } else {
       setEmailStatus('idle')
     }
