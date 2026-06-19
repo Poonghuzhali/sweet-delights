@@ -302,3 +302,44 @@ export const testimonials = [
     image: 'https://i.pravatar.cc/100?img=32',
   },
 ]
+
+export const checkoutItems = [
+  {
+    id: 'chocolate-truffle',
+    name: 'Chocolate Truffle Cake',
+    detail: '1 kg • Eggless',
+    price: 850,
+    qty: 1,
+    image:
+      'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=200&q=80',
+  },
+  {
+    id: 'cream-puff',
+    name: 'Cream Puff',
+    detail: '1 kg • Eggless',
+    price: 850,
+    qty: 1,
+    image:
+      'https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=200&q=80',
+  },
+]
+
+export const upsellItems = [
+  {
+    id: 'candles',
+    name: 'Premium Candles',
+    price: 150,
+    image:
+      'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=200&q=80',
+  },
+  {
+    id: 'popper',
+    name: 'Party Popper',
+    price: 120,
+    image:
+      'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=200&q=80',
+  },
+]
+
+export const deliveryFee = 50
+export const taxRate = 0.05

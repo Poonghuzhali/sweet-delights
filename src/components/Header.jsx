@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { CakeIcon, CartIcon } from '../icons'
 import { useCart } from '../context/CartContext'
 
@@ -11,6 +11,12 @@ const navLinks = [
 
 export default function Header() {
   const { cartCount, addToCart } = useCart()
+  const navigate = useNavigate()
+
+  const handleCartClick = () => {
+    addToCart()
+    navigate('/cart')
+  }
 
   return (
     <header className="header">
@@ -39,7 +45,7 @@ export default function Header() {
             )
           )}
         </nav>
-        <button className="cart-btn" onClick={addToCart} aria-label="cart">
+        <button className="cart-btn" onClick={handleCartClick} aria-label="cart">
           <span className="cart-btn__icon">
             <CartIcon size={22} />
             <span className="cart-btn__badge">{cartCount}</span>
