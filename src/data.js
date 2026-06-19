@@ -184,9 +184,15 @@ export const pastryCategories = [
   'Best Sellers',
 ]
 
+export const selectPastryHero = [
+  'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80',
+  'https://images.unsplash.com/photo-1426869981800-95ebf51ce900?auto=format&fit=crop&w=700&q=80',
+]
+
 export const pastryItems = [
   {
-    name: 'Croissant',
+    id: 'croissant',
+    name: 'Plain Croissant',
     price: '₹60',
     desc: 'Classic French butter croissant, flaky and golden layered perfection.',
     category: 'Croissants',
@@ -195,6 +201,34 @@ export const pastryItems = [
       'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'pain-chocolat',
+    name: 'Pain au Chocolat',
+    price: '₹80',
+    desc: 'Buttery layers wrapped around rich dark chocolate batons.',
+    category: 'Croissants',
+    image:
+      'https://images.unsplash.com/photo-1623334044303-2410814eda4c?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'almond-croissant',
+    name: 'Almond Croissant',
+    price: '₹90',
+    desc: 'Flaky croissant filled with almond cream and topped with sliced almonds.',
+    category: 'Croissants',
+    image:
+      'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'strawberry-croissant',
+    name: 'Strawberry Croissant',
+    price: '₹85',
+    desc: 'Golden croissant filled with fresh strawberry compote and cream.',
+    category: 'Croissants',
+    image:
+      'https://images.unsplash.com/photo-1558961363-fa8fdd82db35?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'chocolate-eclair',
     name: 'Chocolate Éclair',
     price: '₹120',
     desc: 'Choux pastry filled with rich chocolate cream and a glossy glaze on top.',
@@ -203,6 +237,7 @@ export const pastryItems = [
       'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'strawberry-tart',
     name: 'Strawberry Tart',
     price: '₹100',
     desc: 'Buttery tart shell filled with vanilla custard and fresh strawberries.',
@@ -211,6 +246,7 @@ export const pastryItems = [
       'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'cream-puff',
     name: 'Cream Puff',
     price: '₹100',
     desc: 'Light choux puffs filled with airy vanilla whipped cream.',
@@ -220,6 +256,16 @@ export const pastryItems = [
       'https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'macaron-box',
+    name: 'Macaron Box',
+    price: '₹150',
+    desc: 'Assorted colourful macarons with delicate shells and smooth fillings.',
+    category: 'Best Sellers',
+    image:
+      'https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'baklava',
     name: 'Baklava',
     price: '₹90',
     desc: 'Flaky layered phyllo pastry with crushed nuts and sweet honey syrup.',
@@ -228,6 +274,7 @@ export const pastryItems = [
       'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'apple-turnover',
     name: 'Apple Turnover',
     price: '₹100',
     desc: 'Crisp puff pastry parcels filled with cinnamon spiced apple.',
@@ -236,6 +283,7 @@ export const pastryItems = [
       'https://images.unsplash.com/photo-1600617953089-90c8f0d3a836?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'cheese-danish',
     name: 'Cheese Danish',
     price: '₹120',
     desc: 'Soft golden danish pastry with a sweet cream cheese filling.',
@@ -244,6 +292,25 @@ export const pastryItems = [
       'https://images.unsplash.com/photo-1620921568790-c1cf8984624c?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'fruit-danish',
+    name: 'Fruit Danish',
+    price: '₹110',
+    desc: 'Flaky danish topped with seasonal fresh fruits and glaze.',
+    category: 'Danish',
+    image:
+      'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'cinnamon-swirl',
+    name: 'Cinnamon Swirl',
+    price: '₹95',
+    desc: 'Soft rolled pastry swirled with cinnamon sugar and butter.',
+    category: 'Danish',
+    image:
+      'https://images.unsplash.com/photo-1601979031925-424e53b6caaa?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'citrus-pastry',
     name: 'Citrus Pastry',
     price: '₹100',
     desc: 'Zesty citrus cream piped into a crisp, delicate pastry shell.',
@@ -252,6 +319,7 @@ export const pastryItems = [
       'https://images.unsplash.com/photo-1464195244916-405fa0a82545?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'mille-feuille',
     name: 'Mille Feuille',
     price: '₹130',
     desc: 'Delicate layers of puff pastry stacked with silky vanilla cream.',
@@ -261,6 +329,7 @@ export const pastryItems = [
       'https://images.unsplash.com/photo-1612886623842-9a5b1f6b5a8d?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'banana-pastry',
     name: 'Banana Pastry Slice',
     price: '₹90',
     desc: 'Moist banana layered pastry slice with a light caramel finish.',
@@ -268,6 +337,42 @@ export const pastryItems = [
     badge: 'NEW',
     image:
       'https://images.unsplash.com/photo-1601979031925-424e53b6caaa?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'cannoli',
+    name: 'Cannoli',
+    price: '₹110',
+    desc: 'Crisp fried shells filled with sweet ricotta and chocolate chips.',
+    category: 'Best Sellers',
+    image:
+      'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'scone',
+    name: 'Blueberry Scone',
+    price: '₹75',
+    desc: 'Tender baked scone studded with juicy blueberries.',
+    category: 'Best Sellers',
+    image:
+      'https://images.unsplash.com/photo-1558961363-fa8fdd82db35?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'muffin',
+    name: 'Chocolate Muffin',
+    price: '₹70',
+    desc: 'Rich, moist chocolate muffin with a soft crumb and deep cocoa flavour.',
+    category: 'Best Sellers',
+    image:
+      'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 'cupcake',
+    name: 'Vanilla Cupcake',
+    price: '₹65',
+    desc: 'Fluffy vanilla sponge topped with swirled buttercream frosting.',
+    category: 'Best Sellers',
+    image:
+      'https://images.unsplash.com/photo-1426869981800-95ebf51ce900?auto=format&fit=crop&w=600&q=80',
   },
 ]
 

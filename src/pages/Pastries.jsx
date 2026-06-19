@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   pastryBanner,
   pastryCategories,
@@ -54,9 +55,15 @@ export default function Pastries() {
             ))}
           </div>
 
+          <div className="pastries-select-link">
+            <Link to="/pastries/select" className="btn btn--primary">
+              Select All Pastries
+            </Link>
+          </div>
+
           <div className="pastry-grid">
             {visible.map((item) => (
-              <article className="pastry-card" key={item.name}>
+              <article className="pastry-card" key={item.id}>
                 <div className="pastry-card__media">
                   <img src={item.image} alt={item.name} />
                   {item.badge && (

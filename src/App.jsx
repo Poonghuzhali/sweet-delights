@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Cake from './pages/Cake'
 import Pastries from './pages/Pastries'
+import SelectPastries from './pages/SelectPastries'
 import About from './pages/About'
 import Checkout from './pages/Checkout'
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cake" element={<Cake />} />
           <Route path="/pastries" element={<Pastries />} />
+          <Route path="/pastries/select" element={<SelectPastries />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Checkout />} />
         </Routes>
