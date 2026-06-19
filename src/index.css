@@ -1228,6 +1228,98 @@ a {
   color: var(--muted);
 }
 
+/* ---------- Place Order ---------- */
+.place-order {
+  min-height: 100vh;
+  background: var(--pink-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.place-order__inner {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+.place-order h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.place-order__subtitle {
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.55;
+  margin-bottom: 32px;
+  max-width: 42ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.place-order__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.place-order__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.place-order__form input,
+.place-order__form select,
+.place-order__form textarea {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #fff5f6;
+  color: var(--ink);
+  outline: none;
+  width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.place-order__form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%237c7480' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.place-order__form input:focus,
+.place-order__form select:focus,
+.place-order__form textarea:focus {
+  box-shadow: 0 0 0 2px rgba(232, 91, 150, 0.35);
+}
+
+.place-order__form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.place-order__submit {
+  width: 100%;
+  margin-top: 8px;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 920px) {
   .hero__inner {

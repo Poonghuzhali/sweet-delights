@@ -343,3 +343,21 @@ export const upsellItems = [
 
 export const deliveryFee = 50
 export const taxRate = 0.05
+
+export const orderFlavours = [
+  'Chocolate Truffle',
+  'Red Velvet',
+  'Black Forest',
+  'Pineapple',
+  'Butterscotch Cake',
+  'Vanilla Berry',
+  'Blueberry Cake',
+  'Mango Delight',
+  'Croissant',
+  'Chocolate Éclair',
+  'Strawberry Tart',
+  'Cream Puff',
+  'Baklava',
+  'Cheese Danish',
+  'Mille Feuille',
+]

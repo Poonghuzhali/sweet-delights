@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import {
   checkoutItems as defaultItems,
   upsellItems,
@@ -20,6 +21,7 @@ function formatPrice(amount) {
 }
 
 export default function Checkout() {
+  const navigate = useNavigate()
   const [items, setItems] = useState(defaultItems)
   const [addedUpsells, setAddedUpsells] = useState([])
   const [payment, setPayment] = useState('online')
@@ -308,7 +310,11 @@ export default function Checkout() {
             <span>Total</span>
             <span>{formatPrice(total)}</span>
           </div>
-          <button type="button" className="btn btn--primary btn--block">
+          <button
+            type="button"
+            className="btn btn--primary btn--block"
+            onClick={() => navigate('/place-order')}
+          >
             Place Order
           </button>
           <p className="order-summary__secure">
