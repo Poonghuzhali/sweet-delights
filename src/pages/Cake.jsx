@@ -3,6 +3,7 @@ import {
   cakeItems,
   eventPerks,
   eventImages,
+  eventEnquiryProduct,
 } from '../data'
 import { CheckIcon, BadgeIcon } from '../icons'
 import { useCart } from '../context/CartContext'
@@ -14,7 +15,6 @@ export default function Cake() {
 
   return (
     <>
-      {/* Banner strip */}
       <section className="cake-banner">
         {cakeBanner.map((src, i) => (
           <div className="cake-banner__cell" key={i}>
@@ -23,7 +23,6 @@ export default function Cake() {
         ))}
       </section>
 
-      {/* Flavours */}
       <section className="section section--pink-soft">
         <div className="container">
           <h2 className="collection__title">The Cake Flavours</h2>
@@ -34,7 +33,7 @@ export default function Cake() {
 
           <div className="cards">
             {cakeItems.map((item) => (
-              <article className="card" key={item.name}>
+              <article className="card" key={item.id}>
                 <div className="card__media">
                   <img src={item.image} alt={item.name} />
                 </div>
@@ -44,7 +43,9 @@ export default function Cake() {
                   <span className="card__price">{item.price}</span>
                   <button
                     className="btn btn--primary btn--block"
-                    onClick={addToCart}
+                    onClick={() =>
+                      addToCart({ ...item, detail: '1 kg • Eggless' })
+                    }
                   >
                     Order Now
                   </button>
@@ -55,13 +56,9 @@ export default function Cake() {
         </div>
       </section>
 
-      {/* Testimonials */}
       <Testimonials />
-
-      {/* Behind the Scenes */}
       <BehindScenes />
 
-      {/* Events / booking */}
       <section className="section section--pink-soft section--tight">
         <div className="container">
           <div className="events">
@@ -90,7 +87,10 @@ export default function Cake() {
                   </li>
                 ))}
               </ul>
-              <button className="btn btn--primary" onClick={addToCart}>
+              <button
+                className="btn btn--primary"
+                onClick={() => addToCart(eventEnquiryProduct)}
+              >
                 Enquire Now
               </button>
             </div>

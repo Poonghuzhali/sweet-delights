@@ -2,6 +2,7 @@ export const navLinks = ['Home', 'Cake', 'Pastries', 'About']
 
 export const flavours = [
   {
+    id: 'chocolate-truffle',
     name: 'Chocolate Truffle',
     desc: 'Rich, dense chocolate layers soaked in our secret ganache.',
     price: '₹850',
@@ -9,6 +10,7 @@ export const flavours = [
       'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'red-velvet',
     name: 'Red Velvet',
     desc: 'Soft, velvet chocolate base topped with smooth cream cheese.',
     price: '₹750',
@@ -16,6 +18,7 @@ export const flavours = [
       'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'black-forest',
     name: 'Black Forest',
     desc: 'Layered chocolate sponge soaked in kirsch with cherries.',
     price: '₹650',
@@ -23,6 +26,7 @@ export const flavours = [
       'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'pineapple',
     name: 'Pineapple',
     desc: 'Airy, tropical sponge soaked in fresh pineapple compote.',
     price: '₹650',
@@ -30,6 +34,24 @@ export const flavours = [
       'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=600&q=80',
   },
 ]
+
+export const featuredProduct = {
+  id: 'signature-celebration-cake',
+  name: 'Signature Celebration Cake',
+  price: '₹850',
+  detail: '1 kg • Eggless',
+  image:
+    'https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=600&q=80',
+}
+
+export const eventEnquiryProduct = {
+  id: 'event-order-enquiry',
+  name: 'Custom Event Order',
+  price: '₹500',
+  detail: 'Consultation • Custom quote',
+  image:
+    'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80',
+}
 
 export const pastries = [
   'https://images.unsplash.com/photo-1426869981800-95ebf51ce900?auto=format&fit=crop&w=600&q=80',
@@ -111,6 +133,7 @@ export const cakeBanner = [
 
 export const cakeItems = [
   {
+    id: 'cake-chocolate-truffle',
     name: 'Chocolate Truffle',
     price: '₹850',
     desc: 'Rich, dense chocolate layers soaked in our secret ganache.',
@@ -118,6 +141,7 @@ export const cakeItems = [
       'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'cake-red-velvet',
     name: 'Red Velvet',
     price: '₹750',
     desc: 'Soft velvet chocolate base topped with smooth cream cheese.',
@@ -125,6 +149,7 @@ export const cakeItems = [
       'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'cake-black-forest',
     name: 'Black Forest',
     price: '₹650',
     desc: 'Layered chocolate sponge soaked in kirsch with cherries.',
@@ -132,6 +157,7 @@ export const cakeItems = [
       'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'cake-pineapple',
     name: 'Pineapple',
     price: '₹650',
     desc: 'Airy tropical sponge soaked in fresh pineapple compote.',
@@ -139,6 +165,7 @@ export const cakeItems = [
       'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'cake-butterscotch',
     name: 'Butterscotch Cake',
     price: '₹700',
     desc: 'Caramelised butterscotch sponge with crunchy praline bits.',
@@ -146,6 +173,7 @@ export const cakeItems = [
       'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'cake-vanilla-berry',
     name: 'Vanilla Berry',
     price: '₹700',
     desc: 'Light vanilla sponge layered with fresh mixed berries.',
@@ -153,6 +181,7 @@ export const cakeItems = [
       'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'cake-blueberry',
     name: 'Blueberry Cake',
     price: '₹800',
     desc: 'Moist sponge folded with blueberries and cream cheese frosting.',
@@ -160,6 +189,7 @@ export const cakeItems = [
       'https://images.unsplash.com/photo-1464195244916-405fa0a82545?auto=format&fit=crop&w=600&q=80',
   },
   {
+    id: 'cake-mango-delight',
     name: 'Mango Delight',
     price: '₹750',
     desc: 'Seasonal mango mousse over a soft fresh cream sponge.',
@@ -171,9 +201,9 @@ export const cakeItems = [
 export const pastryBanner = [
   'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80',
   'https://images.unsplash.com/photo-1426869981800-95ebf51ce900?auto=format&fit=crop&w=500&q=80',
-  'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=500&q=80',
   'https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=500&q=80',
-  'https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=500&q=80',
+  'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&q=80',
+  'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80',
 ]
 
 export const pastryCategories = [
@@ -207,7 +237,7 @@ export const pastryItems = [
     desc: 'Buttery layers wrapped around rich dark chocolate batons.',
     category: 'Croissants',
     image:
-      'https://images.unsplash.com/photo-1623334044303-2410814eda4c?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'almond-croissant',
@@ -216,7 +246,7 @@ export const pastryItems = [
     desc: 'Flaky croissant filled with almond cream and topped with sliced almonds.',
     category: 'Croissants',
     image:
-      'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'strawberry-croissant',
@@ -225,7 +255,7 @@ export const pastryItems = [
     desc: 'Golden croissant filled with fresh strawberry compote and cream.',
     category: 'Croissants',
     image:
-      'https://images.unsplash.com/photo-1558961363-fa8fdd82db35?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'chocolate-eclair',
@@ -280,7 +310,7 @@ export const pastryItems = [
     desc: 'Crisp puff pastry parcels filled with cinnamon spiced apple.',
     category: 'Croissants',
     image:
-      'https://images.unsplash.com/photo-1600617953089-90c8f0d3a836?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'cheese-danish',
@@ -326,7 +356,7 @@ export const pastryItems = [
     category: 'Best Sellers',
     badge: 'BEST',
     image:
-      'https://images.unsplash.com/photo-1612886623842-9a5b1f6b5a8d?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'banana-pastry',
@@ -354,7 +384,7 @@ export const pastryItems = [
     desc: 'Tender baked scone studded with juicy blueberries.',
     category: 'Best Sellers',
     image:
-      'https://images.unsplash.com/photo-1558961363-fa8fdd82db35?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1426869981800-95ebf51ce900?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'muffin',

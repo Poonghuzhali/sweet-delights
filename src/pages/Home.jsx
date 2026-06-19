@@ -1,4 +1,4 @@
-import { flavours, pastries, deliveryFeatures } from '../data'
+import { flavours, pastries, deliveryFeatures, featuredProduct } from '../data'
 import { ClockIcon, ShieldIcon, PinIcon, BikeIcon, BadgeIcon } from '../icons'
 import { useCart } from '../context/CartContext'
 import BehindScenes from '../components/BehindScenes'
@@ -12,7 +12,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero */}
       <section className="hero" id="home">
         <div className="container hero__inner">
           <div className="hero__text">
@@ -25,7 +24,10 @@ export default function Home() {
               premium ingredients, and a touch of magic. Perfect for every
               celebration.
             </p>
-            <button className="btn btn--primary" onClick={addToCart}>
+            <button
+              className="btn btn--primary"
+              onClick={() => addToCart(featuredProduct)}
+            >
               Order Now
             </button>
           </div>
@@ -35,13 +37,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Signature Flavours */}
       <section className="section section--gray" id="cake">
         <div className="container">
           <h2 className="section__title">Our Signature Flavours</h2>
           <div className="cards">
             {flavours.map((item) => (
-              <article className="card" key={item.name}>
+              <article className="card" key={item.id}>
                 <div className="card__media">
                   <img src={item.image} alt={item.name} />
                 </div>
@@ -51,7 +52,9 @@ export default function Home() {
                   <span className="card__price">{item.price}</span>
                   <button
                     className="btn btn--primary btn--block"
-                    onClick={addToCart}
+                    onClick={() =>
+                      addToCart({ ...item, detail: '1 kg • Eggless' })
+                    }
                   >
                     ADD TO CART
                   </button>
@@ -62,7 +65,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pastries gallery */}
       <section className="section section--gray section--tight">
         <div className="container">
           <h2 className="section__title">Delightful Pastries</h2>
@@ -76,10 +78,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Behind the Scenes */}
       <BehindScenes id="about" />
 
-      {/* Delivery banner */}
       <section className="section section--cream section--tight">
         <div className="container">
           <div className="delivery">
@@ -104,7 +104,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
       <Testimonials />
     </>
   )

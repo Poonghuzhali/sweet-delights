@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import {
   pastryBanner,
   pastryCategories,
   pastryItems,
   eventPerks,
   eventImages,
+  eventEnquiryProduct,
 } from '../data'
 import { CheckIcon, BadgeIcon } from '../icons'
 import { useCart } from '../context/CartContext'
@@ -23,7 +23,6 @@ export default function Pastries() {
 
   return (
     <>
-      {/* Banner strip */}
       <section className="pastry-banner">
         {pastryBanner.map((src, i) => (
           <div className="pastry-banner__cell" key={i}>
@@ -32,7 +31,6 @@ export default function Pastries() {
         ))}
       </section>
 
-      {/* Collection */}
       <section className="section section--pink-soft">
         <div className="container">
           <h2 className="collection__title">The Morning Collection</h2>
@@ -55,12 +53,6 @@ export default function Pastries() {
             ))}
           </div>
 
-          <div className="pastries-select-link">
-            <Link to="/pastries/select" className="btn btn--primary">
-              Select All Pastries
-            </Link>
-          </div>
-
           <div className="pastry-grid">
             {visible.map((item) => (
               <article className="pastry-card" key={item.id}>
@@ -78,7 +70,9 @@ export default function Pastries() {
                   <p className="pastry-card__desc">{item.desc}</p>
                   <button
                     className="btn btn--primary btn--block"
-                    onClick={addToCart}
+                    onClick={() =>
+                      addToCart({ ...item, detail: '1 pc • Fresh' })
+                    }
                   >
                     Buy Now
                   </button>
@@ -89,13 +83,9 @@ export default function Pastries() {
         </div>
       </section>
 
-      {/* Testimonials */}
       <Testimonials />
-
-      {/* Behind the Scenes */}
       <BehindScenes />
 
-      {/* Events / booking */}
       <section className="section section--pink-soft section--tight">
         <div className="container">
           <div className="events">
@@ -124,7 +114,10 @@ export default function Pastries() {
                   </li>
                 ))}
               </ul>
-              <button className="btn btn--primary" onClick={addToCart}>
+              <button
+                className="btn btn--primary"
+                onClick={() => addToCart(eventEnquiryProduct)}
+              >
                 Enquire Now
               </button>
             </div>
