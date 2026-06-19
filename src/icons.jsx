@@ -79,6 +79,12 @@ export const CloseIcon = ({ size = 20 }) => (
   </svg>
 )
 
+export const MenuIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+    <path d="M4 7h16M4 12h16M4 17h16" />
+  </svg>
+)
+
 export const LockIcon = ({ size = 14 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="5" y="11" width="14" height="10" rx="2" />

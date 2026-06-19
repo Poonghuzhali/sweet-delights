@@ -200,6 +200,79 @@ a {
   letter-spacing: 0.5px;
 }
 
+/* ---------- Mobile nav toggle ---------- */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.nav-toggle:hover {
+  background: var(--pink-bg);
+  color: var(--pink);
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 14px 24px rgba(45, 34, 48, 0.08);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  z-index: 60;
+}
+
+.mobile-menu--open {
+  max-height: 420px;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+}
+
+.mobile-nav__link {
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-nav__link:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav__link--active {
+  color: var(--pink);
+  background: var(--pink-bg);
+}
+
+.mobile-nav__link--accent {
+  color: var(--pink);
+}
+
+.mobile-menu__backdrop {
+  position: fixed;
+  inset: 0;
+  top: 72px;
+  background: rgba(45, 34, 48, 0.35);
+  z-index: 40;
+}
+
 /* ---------- Hero ---------- */
 .hero {
   background: linear-gradient(180deg, #fdf2ec 0%, #fbeee7 100%);
@@ -2037,6 +2110,25 @@ a {
 }
 
 /* ---------- Responsive ---------- */
+/* Tablets and mobiles: show hamburger toggle menu */
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+  .nav-toggle {
+    display: inline-flex;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .header__user--desktop {
+    display: none;
+  }
+  .header__actions {
+    gap: 12px;
+  }
+}
+
 @media (max-width: 920px) {
   .hero__inner {
     grid-template-columns: 1fr;
@@ -2100,9 +2192,6 @@ a {
 }
 
 @media (max-width: 640px) {
-  .nav {
-    display: none;
-  }
   .hero {
     padding: 44px 0;
   }
@@ -2177,5 +2266,38 @@ a {
   }
   .auth-card {
     padding: 28px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  .header__inner {
+    height: 64px;
+  }
+  .mobile-menu__backdrop {
+    top: 64px;
+  }
+  .logo {
+    font-size: 17px;
+  }
+  .cart-btn__label {
+    display: none;
+  }
+  .header__actions {
+    gap: 8px;
+  }
+  .hero__text h1 {
+    font-size: 27px;
+  }
+  .section {
+    padding: 44px 0;
+  }
+  .section__title {
+    font-size: 22px;
+  }
+  .btn {
+    padding: 11px 20px;
   }
 }
