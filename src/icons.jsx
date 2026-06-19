@@ -54,6 +54,12 @@ export const Star = ({ size = 16 }) => (
   </svg>
 )
 
+export const CheckIcon = ({ size = 18 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+)
+
 export const BadgeIcon = ({ size = 16 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 2l2.4 1.7 2.9-.2 1 2.7 2.4 1.6-.9 2.8.9 2.8-2.4 1.6-1 2.7-2.9-.2L12 22l-2.4-1.7-2.9.2-1-2.7L3.3 16l.9-2.8L3.3 10l2.4-1.6 1-2.7 2.9.2z" />
