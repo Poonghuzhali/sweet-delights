@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import {
   checkoutItems as defaultItems,
   upsellItems,
   deliveryFee,
   taxRate,
 } from '../data'
+import PlaceOrderModal from '../components/PlaceOrderModal'
 import {
   CalendarIcon,
   ClockIcon,
@@ -21,7 +21,7 @@ function formatPrice(amount) {
 }
 
 export default function Checkout() {
-  const navigate = useNavigate()
+  const [showPlaceOrder, setShowPlaceOrder] = useState(false)
   const [items, setItems] = useState(defaultItems)
   const [addedUpsells, setAddedUpsells] = useState([])
   const [payment, setPayment] = useState('online')
@@ -67,6 +67,7 @@ export default function Checkout() {
   const total = subtotal + deliveryFee + taxes
 
   return (
+    <>
     <section className="checkout section section--pink-soft">
       <div className="container checkout__layout">
         <div className="checkout__main">
@@ -313,7 +314,7 @@ export default function Checkout() {
           <button
             type="button"
             className="btn btn--primary btn--block"
-            onClick={() => navigate('/place-order')}
+            onClick={() => setShowPlaceOrder(true)}
           >
             Place Order
           </button>
@@ -323,5 +324,11 @@ export default function Checkout() {
         </aside>
       </div>
     </section>
+
+    <PlaceOrderModal
+      open={showPlaceOrder}
+      onClose={() => setShowPlaceOrder(false)}
+    />
+    </>
   )
 }

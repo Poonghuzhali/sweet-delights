@@ -1228,24 +1228,58 @@ a {
   color: var(--muted);
 }
 
-/* ---------- Place Order ---------- */
-.place-order {
-  min-height: 100vh;
-  background: var(--pink-soft);
+/* ---------- Place Order Modal ---------- */
+.place-order-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(44, 34, 48, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 48px 24px;
+  padding: 24px;
 }
 
-.place-order__inner {
+.place-order-modal {
+  position: relative;
   width: 100%;
   max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--pink-soft);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(45, 34, 48, 0.25);
+}
+
+.place-order-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.place-order-modal__close:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+.place-order-modal__inner {
+  padding: 40px 32px 32px;
   text-align: center;
 }
 
-.place-order h1 {
-  font-size: 32px;
+.place-order-modal__inner h1 {
+  font-size: 28px;
   font-weight: 800;
   color: var(--ink);
   margin-bottom: 12px;
@@ -1255,7 +1289,7 @@ a {
   font-size: 14px;
   color: var(--ink);
   line-height: 1.55;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   max-width: 42ch;
   margin-left: auto;
   margin-right: auto;
@@ -1421,5 +1455,8 @@ a {
   }
   .qty-control {
     margin-left: auto;
+  }
+  .place-order-modal__inner {
+    padding: 36px 20px 24px;
   }
 }
