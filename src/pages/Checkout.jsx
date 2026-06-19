@@ -444,7 +444,7 @@ function CheckoutContent() {
                       placeholder="1234 5678 9012 3456"
                       inputMode="numeric"
                       autoComplete="cc-number"
-                      maxLength={23}
+                      maxLength={19}
                     />
                     <FieldError message={errors.cardNumber} />
                   </label>

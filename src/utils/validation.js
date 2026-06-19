@@ -1,18 +1,3 @@
-function luhnCheck(cardNumber) {
-  let sum = 0
-  let alternate = false
-  for (let i = cardNumber.length - 1; i >= 0; i--) {
-    let digit = parseInt(cardNumber[i], 10)
-    if (alternate) {
-      digit *= 2
-      if (digit > 9) digit -= 9
-    }
-    sum += digit
-    alternate = !alternate
-  }
-  return sum % 10 === 0
-}
-
 export function validateCardPayment(card) {
   const errors = {}
   const cardNumber = (card?.cardNumber || '').replace(/\s/g, '')
@@ -23,10 +8,8 @@ export function validateCardPayment(card) {
 
   if (!cardNumber) {
     errors.cardNumber = 'Card number is required'
-  } else if (!/^\d{13,19}$/.test(cardNumber)) {
-    errors.cardNumber = 'Enter a valid card number (13–19 digits)'
-  } else if (!luhnCheck(cardNumber)) {
-    errors.cardNumber = 'Invalid card number'
+  } else if (!/^\d{16}$/.test(cardNumber)) {
+    errors.cardNumber = 'Enter a valid 16-digit card number'
   }
 
   if (!cardName) {
@@ -76,7 +59,7 @@ export function validateCardPayment(card) {
 }
 
 export function formatCardNumber(value) {
-  const digits = value.replace(/\D/g, '').slice(0, 19)
+  const digits = value.replace(/\D/g, '').slice(0, 16)
   return digits.replace(/(\d{4})(?=\d)/g, '$1 ').trim()
 }
 
