@@ -11,6 +11,7 @@ import {
   getMinDeliveryDate,
   validateCheckoutForm,
 } from '../utils/validation'
+import { isEmailConfigured, sendOrderConfirmation } from '../utils/email'
 import {
   CalendarIcon,
   ClockIcon,
@@ -41,6 +42,7 @@ function CheckoutContent() {
   const navigate = useNavigate()
   const [showPlaceOrder, setShowPlaceOrder] = useState(false)
   const [placedOrder, setPlacedOrder] = useState(null)
+  const [emailStatus, setEmailStatus] = useState('idle')
   const [payment, setPayment] = useState('')
   const [errors, setErrors] = useState({})
   const [formTouched, setFormTouched] = useState(false)
@@ -176,6 +178,14 @@ function CheckoutContent() {
     setPlacedOrder(result.order)
     clearCart()
     setShowPlaceOrder(true)
+    if (isEmailConfigured()) {
+      setEmailStatus('sending')
+      sendOrderConfirmation(result.order, user).then((res) => {
+        setEmailStatus(res.sent ? 'sent' : 'failed')
+      })
+    } else {
+      setEmailStatus('idle')
+    }
   }
 
   const handleModalClose = () => {
@@ -572,6 +582,8 @@ function CheckoutContent() {
         customerName={customerName}
         trackingId={placedOrder?.trackingId}
         orderId={placedOrder?.id}
+        emailStatus={emailStatus}
+        email={user?.email}
       />
     </>
   )

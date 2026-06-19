@@ -1736,6 +1736,21 @@ a {
   margin-bottom: 0;
 }
 
+.order-confirm-email {
+  font-size: 13px;
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.order-confirm-email--ok {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.order-confirm-email--warn {
+  color: #c77700;
+}
+
 /* ---------- Auth & Account ---------- */
 .auth-page,
 .account-page {

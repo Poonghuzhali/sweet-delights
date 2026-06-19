@@ -7,6 +7,8 @@ export default function PlaceOrderModal({
   customerName,
   trackingId,
   orderId,
+  emailStatus = 'idle',
+  email,
 }) {
   useEffect(() => {
     if (!open) return
@@ -57,6 +59,23 @@ export default function PlaceOrderModal({
                 <strong>Tracking ID:</strong> {trackingId}
               </p>
             </div>
+          )}
+          {emailStatus === 'sending' && (
+            <p className="order-confirm-email">
+              Sending order details to {email}…
+            </p>
+          )}
+          {emailStatus === 'sent' && (
+            <p className="order-confirm-email order-confirm-email--ok">
+              A confirmation email with your order details has been sent to{' '}
+              {email}.
+            </p>
+          )}
+          {emailStatus === 'failed' && (
+            <p className="order-confirm-email order-confirm-email--warn">
+              We couldn't email your order details right now, but your order is
+              saved and visible under My Orders.
+            </p>
           )}
           <button
             type="button"
