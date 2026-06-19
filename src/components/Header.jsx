@@ -4,7 +4,7 @@ import { useCart } from '../context/CartContext'
 
 const navLinks = [
   { label: 'Home', to: '/' },
-  { label: 'Cake', to: '/#cake' },
+  { label: 'Cake', to: '/cake' },
   { label: 'Pastries', to: '/pastries' },
   { label: 'About', to: '/#about' },
 ]

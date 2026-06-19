@@ -62,6 +62,70 @@ export const deliveryFeatures = [
   'Live order tracking',
 ]
 
+export const cakeBanner = [
+  'https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=700&q=80',
+  'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80',
+]
+
+export const cakeItems = [
+  {
+    name: 'Chocolate Truffle',
+    price: '₹850',
+    desc: 'Rich, dense chocolate layers soaked in our secret ganache.',
+    image:
+      'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    name: 'Red Velvet',
+    price: '₹750',
+    desc: 'Soft velvet chocolate base topped with smooth cream cheese.',
+    image:
+      'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    name: 'Black Forest',
+    price: '₹650',
+    desc: 'Layered chocolate sponge soaked in kirsch with cherries.',
+    image:
+      'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    name: 'Pineapple',
+    price: '₹650',
+    desc: 'Airy tropical sponge soaked in fresh pineapple compote.',
+    image:
+      'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    name: 'Butterscotch Cake',
+    price: '₹700',
+    desc: 'Caramelised butterscotch sponge with crunchy praline bits.',
+    image:
+      'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    name: 'Vanilla Berry',
+    price: '₹700',
+    desc: 'Light vanilla sponge layered with fresh mixed berries.',
+    image:
+      'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    name: 'Blueberry Cake',
+    price: '₹800',
+    desc: 'Moist sponge folded with blueberries and cream cheese frosting.',
+    image:
+      'https://images.unsplash.com/photo-1464195244916-405fa0a82545?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    name: 'Mango Delight',
+    price: '₹750',
+    desc: 'Seasonal mango mousse over a soft fresh cream sponge.',
+    image:
+      'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=600&q=80',
+  },
+]
+
 export const pastryBanner = [
   'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80',
   'https://images.unsplash.com/photo-1426869981800-95ebf51ce900?auto=format&fit=crop&w=500&q=80',
