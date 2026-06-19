@@ -62,6 +62,48 @@ export const deliveryFeatures = [
   'Live order tracking',
 ]
 
+export const aboutHeroImage =
+  'https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=800&q=80'
+
+export const aboutValues = [
+  {
+    icon: 'sparkle',
+    title: 'Premium Ingredients',
+    desc: 'We source only the finest chocolate, freshest farm fruits, and pure vanilla to ensure every bite is bursting with authentic flavor.',
+  },
+  {
+    icon: 'shield',
+    title: 'Uncompromised Hygiene',
+    desc: 'Baked in a spotless, modern kitchen. We follow rigorous safety and sanitation standards because your health is our priority.',
+  },
+  {
+    icon: 'heart',
+    title: 'Baked with Love',
+    desc: 'Our team of expert chefs pours their heart and soul into every recipe, ensuring each creation is as beautiful as it is delicious.',
+  },
+]
+
+export const team = [
+  {
+    name: 'Chef Isabella',
+    role: 'Head Pastry Chef',
+    desc: 'With 15 years of experience in French pastries, Isabella leads our team with visionary flavor combinations.',
+    image: 'https://i.pravatar.cc/200?img=45',
+  },
+  {
+    name: 'Rahul Sharma',
+    role: 'Master Chocolatier',
+    desc: 'A perfectionist at heart, Rahul ensures every truffle and brownie has the perfect rich, fudgy texture.',
+    image: 'https://i.pravatar.cc/200?img=12',
+  },
+  {
+    name: 'Mei Lin',
+    role: 'Lead Cake Decorator',
+    desc: 'Mei brings cakes to life with her incredible styling skills and eye for stunning, modern aesthetic details.',
+    image: 'https://i.pravatar.cc/200?img=32',
+  },
+]
+
 export const cakeBanner = [
   'https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=700&q=80',
   'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80',

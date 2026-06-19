@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Cake', to: '/cake' },
   { label: 'Pastries', to: '/pastries' },
-  { label: 'About', to: '/#about' },
+  { label: 'About', to: '/about' },
 ]
 
 export default function Header() {
